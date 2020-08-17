@@ -31,23 +31,31 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //type PlaceId: number;
 
 interface User{
-	Position: number,
-	Name: string,
+	private position: number,
+	private name: string,
 };
 
 interface Place{
-	Description: string,
-	Next: number,
-	Preview: number,
+	private description: string,
+	private next: number,
+	private preview: number,
 };
 
 interface Maps{
-	Places: Place[],
+	private places: Place[],
 };
 
-const User1 : User = {
-	Position: 0,
-	Name: "a test user",
+const Place1 : Place = {
+	description: "test place",
 }
 
+Deno.test("User1", () => {
+	const User1 : User = {
+		Position: 0,
+		Name: "test",
+	};
+	assert(User1.name,"test");
+})
+
 console.log(User1)
+console.log(Place1)

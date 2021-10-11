@@ -45,9 +45,6 @@ interface Maps{
 	private places: Place[],
 };
 
-const Place1 : Place = {
-	description: "test place",
-}
 
 Deno.test("User1", () => {
 	const User1 : User = {
@@ -55,7 +52,14 @@ Deno.test("User1", () => {
 		Name: "test",
 	};
 	assert(User1.name,"test");
-})
+});
 
-console.log(User1)
-console.log(Place1)
+Deno.test("User1", () => {
+	const Place1 : Place = {
+		description: "test place",
+	}
+	assert(Place1.description,"test place");
+});
+
+console.log(User1);
+console.log(Place1);
